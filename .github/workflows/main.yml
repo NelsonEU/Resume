@@ -16,3 +16,4 @@ jobs:
         server: ${{ secrets.OVH_SERVER }}
         username: ${{ secrets.OVH_USERNAME }}
         password: ${{ secrets.OVH_PASSWORD }}
+        server-dir: /www/
