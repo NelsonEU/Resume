@@ -14,6 +14,7 @@ body {
   body {
     padding-top: 0;
     padding-left: 17rem;
+    background-color: #f9f9f6;
   }
 }
 
@@ -79,11 +80,11 @@ p.lead {
   font-size: 3rem;
 }
 
-.list-inline-item{
+.list-inline-item {
   opacity: 0.85;
 }
 
-.list-inline-item:hover{
+.list-inline-item:hover {
   opacity: 1;
 }
 
@@ -141,7 +142,7 @@ p.lead {
 section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
-  max-width: 75rem;
+  background-color: #f9f9f6;
 }
 
 section.resume-section .resume-item .resume-date {
@@ -179,4 +180,46 @@ a {
 
 a:hover, a:focus, a:active {
   color: #2d2782;
+}
+
+.article-card {
+  border-radius: 0.5rem;
+  background-color: #f9f9f6;
+  box-shadow: 0 0.15rem 0.4rem rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.35rem 0.9rem rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+}
+
+.article-card-body {
+  padding: 1.1rem 1.25rem;
+  height: 100%;
+}
+
+.article-badge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+}
+
+.article-excerpt {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.article-meta {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.m-0 {
+  border-color: #f9f9f6 !important;
 }
