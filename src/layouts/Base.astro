@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+import { profile, links, goodreads, experience, education } from '../data/site';
+
+const image = new URL(profile.image, Astro.site).href;
+const current = experience[0];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${profile.url}#arnaud-etienne`,
+  name: profile.name,
+  url: profile.url,
+  image,
+  address: { '@type': 'PostalAddress', addressCountry: 'BE' },
+  sameAs: [...links.map((l) => l.href), goodreads.profile],
+  jobTitle: profile.jobTitle,
+  knowsAbout: profile.knowsAbout,
+  worksFor: { '@type': 'Organization', name: current.org, url: current.href },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: education.org, url: education.href },
+};
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{profile.name} · arn0.be</title>
+    <meta name="description" content={profile.description} />
+    <link rel="canonical" href={profile.url} />
+    <meta property="og:site_name" content="arn0.be" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={profile.name} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={profile.url} />
+    <meta property="og:image" content={image} />
+    <meta property="og:description" content={profile.description} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={profile.name} />
+    <meta name="twitter:description" content={profile.description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="theme-color" content="#151411" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8f7f3" media="(prefers-color-scheme: light)" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <!-- Runs before first paint so the saved theme never flashes. -->
+    <script is:inline>
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('arn0-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <link rel="icon" type="image/png" href={profile.image} />
+    <link rel="apple-touch-icon" href={profile.image} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      is:inline
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "7bef20ff43b0490ea2c71a0df306cee9"}'></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <slot />
+    </div>
+    <script>
+      import '../scripts/main';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+---
+// A terminal prompt as the visible heading, with a plain label for screen readers and crawlers.
+interface Props {
+  cmd: string;
+  label: string;
+}
+const { cmd, label } = Astro.props;
+---
+
+<h2 class="prompt">
+  <span aria-hidden="true"><span class="acc">$</span> {cmd}</span><span class="sr-only">{label}</span>
+</h2>

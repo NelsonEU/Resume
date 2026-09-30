@@ -1,0 +1,14 @@
+---
+import type { Project } from '../data/site';
+
+interface Props {
+  project: Project;
+}
+const { project } = Astro.props;
+---
+
+<a class="project reveal" href={project.href} target="_blank">
+  <span class="mono muted small">{project.dir}</span>
+  <h3 class="p-title">{project.title} {project.wip && <span class="badge mono">wip</span>}</h3>
+  <span class="p-text">{project.text}</span>
+</a>
