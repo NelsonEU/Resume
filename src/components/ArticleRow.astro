@@ -1,0 +1,17 @@
+---
+import type { Article } from '../data/site';
+
+interface Props {
+  article: Article;
+  isNew?: boolean;
+}
+const { article, isNew = false } = Astro.props;
+---
+
+<a class="article reveal" href={article.href} target="_blank">
+  <time class="mono muted" datetime={article.date}>{article.date}</time>
+  <div>
+    <h3 class="a-title">{article.title} {isNew && <span class="badge mono">new</span>}</h3>
+    <span class="a-dek">{article.dek}</span>
+  </div>
+</a>

@@ -1,0 +1,28 @@
+---
+import type { Experience } from '../data/site';
+
+interface Props {
+  item: Experience;
+}
+const { item } = Astro.props;
+---
+
+<div class="exp reveal">
+  <span class="mono muted">{item.when}</span>
+  <div>
+    <h3 class="e-role">
+      {item.role}{' '}
+      <span class="acc">@ {item.href ? <a href={item.href} target="_blank">{item.org}</a> : item.org}</span>
+    </h3>
+    <span class="e-note">{item.note}</span>
+    {
+      item.bullets && (
+        <ul class="e-list">
+          {item.bullets.map((b) => (
+            <li>{b}</li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</div>

@@ -1,0 +1,96 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import ArticleRow from '../components/ArticleRow.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ExperienceItem from '../components/ExperienceItem.astro';
+import { profile, articles, projects, experience, education, links, goodreads } from '../data/site';
+import { getReading } from '../lib/goodreads';
+
+const { current, recent } = await getReading();
+const hasBooks = current.length + recent.length > 0;
+---
+
+<Base>
+  <Header />
+
+  <section class="hero reveal">
+    <div class="prompt"><span class="acc">$</span> whoami</div>
+    <h1>{profile.name}</h1>
+    <p class="intro">{profile.intro}</p>
+    <div class="prompt prompt-gap"><span class="acc">$</span> cat about.md</div>
+    <p class="about" set:html={profile.about} />
+    <div class="prompt ink"><span class="acc">$</span><span class="cursor" aria-hidden="true"></span></div>
+  </section>
+
+  <section id="writing">
+    <div class="section-head mono">
+      <SectionTitle cmd="ls -t articles/" label="Articles" />
+      <a href="https://medium.com/@arnaudetienne" target="_blank" class="small-link">medium ↗</a>
+    </div>
+    <div class="articles">
+      {articles.map((article, i) => <ArticleRow article={article} isNew={i === 0} />)}
+    </div>
+  </section>
+
+  <section id="projects">
+    <SectionTitle cmd="ls projects/" label="Projects" />
+    <div class="grid-projects">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <section id="now" class="two reveal">
+    <div class="stack">
+      <SectionTitle cmd="cat now.txt" label="Now" />
+      <p class="now-line">{profile.now}</p>
+      <p class="muted small-text" set:html={profile.interests} />
+    </div>
+    <div class="stack">
+      <SectionTitle cmd="tail reading.log" label="Reading" />
+      {
+        hasBooks && (
+          <div class="log">
+            {current.map((b) => (
+              <>
+                <span class="mono acc">reading</span>
+                <a href={b.href} target="_blank" class="w500">
+                  {b.title} <span class="muted w400">— {b.author}</span>
+                </a>
+              </>
+            ))}
+            {recent.map((b) => (
+              <>
+                <span class="mono muted">done</span>
+                <a href={b.href} target="_blank">{b.title}</a>
+              </>
+            ))}
+          </div>
+        )
+      }
+      <a href={goodreads.profile} target="_blank" class="small-link mono">goodreads ↗</a>
+    </div>
+  </section>
+
+  <section id="cv">
+    <div class="section-head">
+      <SectionTitle cmd="cat experience.log" label="Experience and education" />
+      <a href={profile.cv} target="_blank" class="btn mono">download cv.pdf ↓</a>
+    </div>
+    {experience.map((item) => <ExperienceItem item={item} />)}
+    <ExperienceItem item={education} />
+    <div class="stackline mono"><span class="muted">stack=</span>{profile.stack.join(' · ')}</div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <SectionTitle cmd="ls ~/links" label="Links" />
+    <div class="links">
+      {links.map((l) => <a class="chip mono" href={l.href} target="_blank">{l.label} ↗</a>)}
+    </div>
+  </section>
+
+  <footer class="foot mono">
+    <span>© {new Date().getFullYear()} {profile.name}</span><span>served from Belgium 🇧🇪</span>
+  </footer>
+</Base>
