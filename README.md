@@ -40,27 +40,16 @@ The repository's Pages source must be set to **GitHub Actions** (Settings → Pa
 
 ## Minecraft status (`worker/`)
 
-The live status on the Pi project card comes from a Cloudflare Worker at `arn0.be/api/pi`. The Worker calls the Pi's dashboard API with basic auth, keeps only a few harmless fields (online, state, player count, mood) and caches the result for 60 seconds, so the Pi gets at most one request a minute. The credentials are Worker secrets: they never reach the repo or the browser. If the Worker or the Pi is unreachable, the status box stays hidden.
+The live status on the Pi project card comes from a Cloudflare Worker, the page fetches it once on load. The Worker calls the Pi's dashboard API, keeps only a few fields (online, state, player count, mood) and caches the result for 60 seconds. The credentials are Worker secrets: they never reach the repo or the browser. If the Worker or the Pi is unreachable, the status stays hidden.
 
-It's deployed separately from the site, by `.github/workflows/deploy-worker.yml` on every push to `master` that touches `worker/` (or manually from the Actions tab). The workflow needs two repository secrets: `CLOUDFLARE_API_TOKEN` (a Cloudflare API token from the "Edit Cloudflare Workers" template) and `CLOUDFLARE_ACCOUNT_ID`.
+Load on the Pi is bounded twice:
 
-The Pi's URL and credentials are Worker secrets, set once from `worker/` and kept across deploys:
+- **Worker cache:** at most one request a minute per Cloudflare data centre the visitors come through (in practice one or two).
+- **Rate limiting rule:** configured in the Cloudflare dashboard, not in this repo (Security → WAF → Rate limiting rules). Blocked requests get a `429` and never reach the Worker.
 
-```sh
-npx wrangler secret put PI_API_URL
-npx wrangler secret put PI_USERNAME
-npx wrangler secret put PI_PASSWORD
-```
+It's deployed separately from the site, by `.github/workflows/deploy-worker.yml` on every push to `master` that touches `worker/` (or manually from the Actions tab). The workflow needs two repository secrets: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
 
-To deploy by hand, or run it locally with the values in `worker/.dev.vars` (see `.dev.vars.example`):
-
-```sh
-cd worker
-npm install
-npx wrangler deploy   # or: npx wrangler dev
-```
-
-Always run Wrangler from `worker/`: at the repo root it doesn't find `wrangler.toml` and offers to move the whole site to Cloudflare.
+The Pi's URL and credentials are Worker secrets, set once from `worker/` and kept across deploys.
 
 ## Updating content
 
