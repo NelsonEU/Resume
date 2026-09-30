@@ -86,6 +86,8 @@ section { display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 2
 .project:hover { transform: translateY(-3px); border-color: var(--acc); color: inherit; }
 .p-title { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
 .p-text { color: var(--muted); font-size: 15px; text-wrap: pretty; }
+.well { font-size: 13px; line-height: 1.8; background: var(--hover); border-radius: 6px; padding: 12px 14px; }
+.well[hidden] { display: none; }
 
 .stack { display: flex; flex-direction: column; gap: 12px; }
 .now-line { font-size: 20px; font-weight: 500; letter-spacing: -0.01em; }

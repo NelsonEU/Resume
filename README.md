@@ -38,6 +38,30 @@ A GitHub Action (`.github/workflows/deploy.yml`) builds the site and deploys it 
 
 The repository's Pages source must be set to **GitHub Actions** (Settings → Pages). The custom domain comes from `public/CNAME`, and DNS is on Cloudflare.
 
+## Minecraft status (`worker/`)
+
+The live status on the Pi project card comes from a Cloudflare Worker at `arn0.be/api/pi`. The Worker calls the Pi's dashboard API with basic auth, keeps only a few harmless fields (online, state, player count, mood) and caches the result for 60 seconds, so the Pi gets at most one request a minute. The credentials are Worker secrets: they never reach the repo or the browser. If the Worker or the Pi is unreachable, the status box stays hidden.
+
+It's deployed separately from the site, by `.github/workflows/deploy-worker.yml` on every push to `master` that touches `worker/` (or manually from the Actions tab). The workflow needs two repository secrets: `CLOUDFLARE_API_TOKEN` (a Cloudflare API token from the "Edit Cloudflare Workers" template) and `CLOUDFLARE_ACCOUNT_ID`.
+
+The Pi's URL and credentials are Worker secrets, set once from `worker/` and kept across deploys:
+
+```sh
+npx wrangler secret put PI_API_URL
+npx wrangler secret put PI_USERNAME
+npx wrangler secret put PI_PASSWORD
+```
+
+To deploy by hand, or run it locally with the values in `worker/.dev.vars` (see `.dev.vars.example`):
+
+```sh
+cd worker
+npm install
+npx wrangler deploy   # or: npx wrangler dev
+```
+
+Always run Wrangler from `worker/`: at the repo root it doesn't find `wrangler.toml` and offers to move the whole site to Cloudflare.
+
 ## Updating content
 
 | Change | Where |
