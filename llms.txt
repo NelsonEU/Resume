@@ -1,0 +1,38 @@
+# Arnaud Etienne
+
+> Software engineer from Belgium. Full-stack with a backend-heavy focus: SQL, event-driven systems (RabbitMQ), Docker/Kubernetes, Terraform and CI/CD. Currently a Software Engineer at Commuty.
+
+Cares about test coverage as a tool for confidence rather than a box to tick, clean and readable solutions, mentoring, thorough code reviews and honest technical feedback. Uses AI coding assistants daily, as leverage on top of solid fundamentals.
+
+Stack: Ruby on Rails, Quarkus (Java), JavaScript (Angular, Ionic, Ember.js), PostgreSQL, RabbitMQ, Docker, Kubernetes, Helm, Terraform, AWS.
+
+## Experience
+
+- Software Engineer, [Commuty](https://commuty.com) (Nov 2023 – now): core parking booking features, public APIs and statistics pipelines. Rails and Quarkus services in a 10+ microservices, event-driven architecture over RabbitMQ; Angular web app on an internal component library and an Ionic mobile app; connectors between the Parking Access API and external access-control systems (Syntegro, SALTO KS…); Kubernetes with Helm, AWS infrastructure with Terraform, CI/CD.
+- Lead Developer, [Squarehub](https://squarehub.eu) (Jul 2022 – Oct 2023): led the recruitment platform (product decisions, architecture, delivery); managed and coached 3 engineers; defined the product and technical roadmap; oversaw data security and compliance; handled IT hiring.
+- Full-stack Developer, [Overloop](https://overloop.com) (Dec 2019 – Jun 2022): Ember.js + Rails CRM.
+- Mobile Development Intern, RiseUp (Feb – May 2019): Xamarin app built from scratch.
+
+## Education
+
+- BSc Computer Science and Management, Institut Paul Lambin, Brussels (2015 – 2019), Cum Laude. Exchange semester at Cégep de Chicoutimi, Canada (2018).
+
+## Articles
+
+- [From a forgotten PDF to a full-stack app with an AI sous-chef](https://medium.com/@arnaudetienne/from-a-forgotten-pdf-to-a-full-stack-app-with-an-ai-sous-chef-38dccca5b36a) (2026-09-18): how a food menu PDF grew into a full-stack app with an AI that fills in recipes.
+- [Is Your Staging Environment Secure?](https://medium.com/@arnaudetienne/is-your-staging-environment-secure-d6985250f145) (2026-01-26): a personal story about discovering a public staging environment.
+- [Self-Hosting Minecraft on a Raspberry Pi 5, Part 2](https://medium.com/@arnaudetienne/self-hosting-minecraft-on-a-raspberry-pi-5-part-2-92fba5da794d) (2025-11-27): a monitoring dashboard with FastAPI, system metrics and server controls.
+- [Self-Hosting Minecraft on a Raspberry Pi 5](https://medium.com/@arnaudetienne/self-hosting-minecraft-on-a-raspberry-pi-5-ff4463cdeb47) (2025-11-25): from bare Pi to a self-hosted server with backups and remote access.
+- [Optimizing database queries in Rails with Active Record](https://medium.com/@arnaudetienne/optimizing-database-queries-in-rails-with-active-record-b84295866af0) (2023-07-05): tracking, understanding and fixing slow queries.
+
+## Projects
+
+- [chez.arn0.be](https://chez.arn0.be): food and recipe app with an AI sous-chef that fills in the recipes.
+
+## Links
+
+- [Website](https://arn0.be/)
+- [CV (PDF)](https://arn0.be/public/cv/arnaud_etienne_CV.pdf)
+- [GitHub](https://github.com/NelsonEU)
+- [LinkedIn](https://www.linkedin.com/in/arnaud-etienne-1655ba68)
+- [Medium](https://medium.com/@arnaudetienne)
