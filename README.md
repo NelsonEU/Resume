@@ -32,6 +32,7 @@ Content lives in several places, so keep them in sync:
 | Currently reading | `index.html` (`#now`) |
 | New CV | Replace `public/cv/arnaud_etienne_CV.pdf`, keeping the exact file name (paths are case-sensitive) |
 | Any content change | Bump `<lastmod>` in `sitemap.xml` |
+| `styles.css` or `main.js` change | Bump the `?v=` number on both links in `index.html`, otherwise browsers keep the cached file for up to 4 hours |
 
 ## Design
 
