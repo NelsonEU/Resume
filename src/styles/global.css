@@ -86,8 +86,14 @@ section { display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 2
 .project:hover { transform: translateY(-3px); border-color: var(--acc); color: inherit; }
 .p-title { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
 .p-text { color: var(--muted); font-size: 15px; text-wrap: pretty; }
-.well { font-size: 13px; line-height: 1.8; background: var(--hover); border-radius: 6px; padding: 12px 14px; }
-.well[hidden] { display: none; }
+.p-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.p-live { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); }
+.p-live.on { color: var(--acc); }
+.p-live .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.p-live.on .dot { animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .3; } }
+.p-meta { margin-top: auto; }
+.p-live[hidden], .p-meta[hidden] { display: none; }
 
 .stack { display: flex; flex-direction: column; gap: 12px; }
 .now-line { font-size: 20px; font-weight: 500; letter-spacing: -0.01em; }
@@ -125,6 +131,6 @@ a.acc:hover, .e-role a:hover { text-decoration: underline; text-underline-offset
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
-  .cursor { animation: none; }
+  .cursor, .p-live.on .dot { animation: none; }
   .article:hover, .project:hover, .btn:hover { transform: none; }
 }

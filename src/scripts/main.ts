@@ -25,19 +25,19 @@ if ('IntersectionObserver' in window) {
 }
 
 // Live Minecraft status on the Pi card. Stays hidden unless the Worker answers.
-const pi = document.querySelector<HTMLElement>('[data-pi]');
-if (pi) {
+const piParts = document.querySelectorAll<HTMLElement>('[data-pi]');
+if (piParts.length) {
   fetch('/api/pi', { cache: 'no-store' })
     .then((res) => (res.ok ? res.json() : Promise.reject()))
     .then((s) => {
       if (!s || typeof s.online !== 'boolean') return;
       const running = s.online && s.state === 'active';
-      const set = (name: string, text: string) => (pi.querySelector(`[data-pi-${name}]`)!.textContent = text);
-      set('state', running ? 'active (running)' : s.state ?? 'offline');
+      const set = (name: string, text: string) => (document.querySelector(`[data-pi-${name}]`)!.textContent = text);
+      set('state', running ? 'online' : 'offline');
       set('players', `${s.players.online}/${s.players.max}`);
       set('mood', s.mood ?? '–');
-      pi.querySelector('[data-pi-dot]')!.className = pi.querySelector('[data-pi-state]')!.className = running ? 'acc' : 'muted';
-      pi.hidden = false;
+      document.querySelector('[data-pi-live]')!.classList.toggle('on', running);
+      piParts.forEach((el) => (el.hidden = false));
     })
     .catch(() => {});
 }
