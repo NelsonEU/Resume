@@ -1,682 +1,208 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>arn0</title>
-	<meta name="description"
-		content="Welcome on my personal website 👋 I‘m Arnaud, a software engineer from Belgium." />
-	<meta property='og:title' content="Arnaud Etienne" />
-	<meta property='og:type' content='website' />
-	<meta property='og:url' content="https://arn0.be" />
-	<meta property='og:image' content="img/profile.png" />
-	<meta property='og:description'
-		content="Welcome on my personal website 👋 I‘m Arnaud, a software engineer from Belgium." />
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "Person",
-	  "@id": "https://arn0.be/#arnaud-etienne",
-	  "name": "Arnaud Etienne",
-	  "url": "https://arn0.be",
-	  "address": {
-	    "@type": "PostalAddress",
-	    "addressCountry": "BE"
-	  },
-	  "sameAs": [
-	    "https://github.com/NelsonEU",
-	    "https://www.linkedin.com/in/arnaud-etienne-1655ba68",
-	    "https://medium.com/@arnaudetienne"
-	  ],
-	  "jobTitle": "Software Engineer",
-	  "knowsAbout": [
-	    "Ruby on Rails",
-	    "Quarkus",
-	    "Java",
-	    "Angular",
-	    "React",
-	    "TypeScript",
-	    "PostgreSQL",
-	    "Kubernetes",
-	    "Docker",
-	    "AWS",
-	    "Microservices",
-	    "System Architecture",
-			"RabbitMQ",
-			"Terraform"
-	  ],
-	  "worksFor": {
-	    "@type": "Organization",
-	    "name": "Commuty",
-	    "url": "https://commuty.net"
-	  }
-	}
-	</script>
-	<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-	<link href="web_ressources/fontawesome-free/css/all.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
-	<link rel="icon" type="image/png" href="img/profile.png" />
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/resume.min.css" rel="stylesheet">
-	<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7bef20ff43b0490ea2c71a0df306cee9"}'></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arnaud Etienne · arn0.be</title>
+<meta name="description" content="Arnaud Etienne, software engineer from Belgium. Writing, projects and CV.">
+<link rel="canonical" href="https://arn0.be/">
+<meta property="og:site_name" content="arn0.be">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Arnaud Etienne">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arn0.be/">
+<meta property="og:image" content="https://arn0.be/public/img/profile.png">
+<meta property="og:description" content="Arnaud Etienne, software engineer from Belgium. Writing, projects and CV.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Arnaud Etienne">
+<meta name="twitter:description" content="Arnaud Etienne, software engineer from Belgium. Writing, projects and CV.">
+<meta name="twitter:image" content="https://arn0.be/public/img/profile.png">
+<meta name="theme-color" content="#151411" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f8f7f3" media="(prefers-color-scheme: light)">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://arn0.be/#arnaud-etienne",
+  "name": "Arnaud Etienne",
+  "url": "https://arn0.be/",
+  "image": "https://arn0.be/public/img/profile.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "BE"
+  },
+  "sameAs": [
+    "https://github.com/NelsonEU",
+    "https://www.linkedin.com/in/arnaud-etienne-1655ba68",
+    "https://medium.com/@arnaudetienne",
+    "https://www.goodreads.com/user/show/74340196-arnaud-etienne"
+  ],
+  "jobTitle": "Software Engineer",
+  "knowsAbout": [
+    "Ruby on Rails",
+    "Quarkus",
+    "Java",
+    "Angular",
+    "React",
+    "TypeScript",
+    "PostgreSQL",
+    "Kubernetes",
+    "Docker",
+    "AWS",
+    "Microservices",
+    "System Architecture",
+    "RabbitMQ",
+    "Terraform"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Commuty",
+    "url": "https://commuty.com"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Institut Paul Lambin",
+    "url": "https://www.vinci.be/en"
+  }
+}
+</script>
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('arn0-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" type="image/png" href="public/img/profile.png">
+<link rel="apple-touch-icon" href="public/img/profile.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "7bef20ff43b0490ea2c71a0df306cee9"}'></script>
 </head>
-
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-		<a class="navbar-brand js-scroll-trigger" href="#about">
-			<span class="d-block d-lg-none">Arnaud Etienne</span>
-			<span class="d-none d-lg-block">
-				<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.png" alt="">
-			</span>
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded=false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#about">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#articles">Articles</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#education">Education</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<div class="container-fluid p-0">
+<div class="wrap">
 
-		<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-			<div class="w-100">
-				<h1 class="mb-0">Arnaud
-					<span class="text-primary">Etienne</span>
-				</h1>
-				<div class="subheading mb-5">
-				</div>
-				<p class="lead">Welcome to my personal website 👋 I’m Arnaud, a software engineer from Belgium 🇧🇪</p>
-				<div class="social-icons">
-					<a href="https://www.linkedin.com/in/arnaud-etienne-1655ba68/" target="_blank">
-						<i class="fab fa-linkedin-in"></i>
-					</a>
-					<a href="https://github.com/NelsonEU" target="_blank">
-						<i class="fab fa-github"></i>
-					</a>
-				</div>
-			</div>
-		</section>
+<header class="top mono">
+  <a href="/"><span class="acc">~/</span>arn0.be</a>
+  <nav class="nav">
+    <a href="#writing">writing</a><a href="#projects">projects</a><a href="#now">now</a><a href="#cv">cv</a><a href="#contact">contact</a>
+  </nav>
+  <div class="top-right">
+    <a href="/public/cv/arnaud_etienne_CV.pdf" target="_blank" class="cv-mobile acc">cv.pdf ↓</a>
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
 
-		<hr class="m-0">
+<section class="hero reveal">
+  <div class="prompt"><span class="acc">$</span> whoami</div>
+  <h1>Arnaud Etienne</h1>
+  <p class="intro">Welcome to my personal website 👋 I'm Arnaud, a software engineer from Belgium 🇧🇪</p>
+  <div class="prompt prompt-gap"><span class="acc">$</span> cat about.md</div>
+  <p class="about">Full-stack engineer with a backend-heavy focus, comfortable writing solid SQL and designing event-driven systems (RabbitMQ). Cares about test coverage as a tool for confidence rather than a box to tick. At ease across the infra stack, from Docker and Kubernetes to Terraform and CI/CD <span class="ink">("Started from Heroku, now we here.")</span>. Uses AI coding assistants daily as leverage on top of solid fundamentals. Values clean, readable solutions, mentoring, thorough code reviews and honest technical feedback.</p>
+  <div class="prompt ink"><span class="acc">$</span><span class="cursor" aria-hidden="true"></span></div>
+</section>
 
-		<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="articles">
-			<div class="w-100">
-				<h2 class="mb-5">Articles</h2>
-				<div class="row">
-					<div class="col-md-6 col-lg-4 mb-4">
-						<a class="article-card d-block h-100" target="_blank"
-							href="https://medium.com/@arnaudetienne/from-a-forgotten-pdf-to-a-full-stack-app-with-an-ai-sous-chef-38dccca5b36a">
-							<div class="article-card-body">
-								<div class="article-badge">18 September 2026</div>
-								<h3 class="h5 mb-2">
-									From a forgotten PDF to a full-stack app with an AI sous-chef
-								</h3>
-								<p class="article-excerpt mb-2">
-									How a simple food menu PDF grew into a full-stack app with an AI that fills in the recipes for you.
-								</p>
-								<div class="article-meta">
-									Read more →
-								</div>
-							</div>
-						</a>
-					</div>
+<section id="writing">
+  <div class="section-head mono">
+    <h2 class="prompt"><span aria-hidden="true"><span class="acc">$</span> ls -t articles/</span><span class="sr-only">Articles</span></h2>
+    <a href="https://medium.com/@arnaudetienne" target="_blank" class="small-link">medium ↗</a>
+  </div>
+  <div class="articles">
+    <a class="article reveal" href="https://medium.com/@arnaudetienne/from-a-forgotten-pdf-to-a-full-stack-app-with-an-ai-sous-chef-38dccca5b36a" target="_blank">
+      <time class="mono muted" datetime="2026-09-18">2026-09-18</time>
+      <div><h3 class="a-title">From a forgotten PDF to a full-stack app with an AI sous-chef <span class="badge mono">new</span></h3><span class="a-dek">How a simple food menu PDF grew into a full-stack app with an AI that fills in the recipes for you.</span></div>
+    </a>
+    <a class="article reveal" href="https://medium.com/@arnaudetienne/is-your-staging-environment-secure-d6985250f145" target="_blank">
+      <time class="mono muted" datetime="2026-01-26">2026-01-26</time>
+      <div><h3 class="a-title">Is Your Staging Environment Secure?</h3><span class="a-dek">A personal story about discovering a public staging environment.</span></div>
+    </a>
+    <a class="article reveal" href="https://medium.com/@arnaudetienne/self-hosting-minecraft-on-a-raspberry-pi-5-part-2-92fba5da794d" target="_blank">
+      <time class="mono muted" datetime="2025-11-27">2025-11-27</time>
+      <div><h3 class="a-title">Self-Hosting Minecraft on a Raspberry Pi 5, Part 2</h3><span class="a-dek">A lightweight monitoring dashboard with FastAPI, system metrics and server controls.</span></div>
+    </a>
+    <a class="article reveal" href="https://medium.com/@arnaudetienne/self-hosting-minecraft-on-a-raspberry-pi-5-ff4463cdeb47" target="_blank">
+      <time class="mono muted" datetime="2025-11-25">2025-11-25</time>
+      <div><h3 class="a-title">Self-Hosting Minecraft on a Raspberry Pi 5</h3><span class="a-dek">From bare Pi to a self-hosted Minecraft server with backups and remote access.</span></div>
+    </a>
+    <a class="article reveal" href="https://medium.com/@arnaudetienne/optimizing-database-queries-in-rails-with-active-record-b84295866af0" target="_blank">
+      <time class="mono muted" datetime="2023-07-05">2023-07-05</time>
+      <div><h3 class="a-title">Optimizing database queries in Rails with Active Record</h3><span class="a-dek">Practical techniques to track, understand and fix slow queries in real projects.</span></div>
+    </a>
+  </div>
+</section>
 
-					<div class="col-md-6 col-lg-4 mb-4">
-						<a class="article-card d-block h-100" target="_blank"
-							href="https://medium.com/@arnaudetienne/is-your-staging-environment-secure-d6985250f145">
-							<div class="article-card-body">
-								<div class="article-badge">26 January 2026</div>
-								<h3 class="h5 mb-2">
-									Is Your Staging Environment Secure?
-								</h3>
-								<p class="article-excerpt mb-2">
-									A personal story about discovering a public staging environment.
-								</p>
-								<div class="article-meta">
-									Read more →
-								</div>
-							</div>
-						</a>
-					</div>
+<section id="projects">
+  <h2 class="prompt"><span aria-hidden="true"><span class="acc">$</span> ls projects/</span><span class="sr-only">Projects</span></h2>
+  <div class="two">
+    <a class="project reveal" href="https://chez.arn0.be" target="_blank">
+      <span class="mono muted small">chez/</span>
+      <h3 class="p-title">chez.arn0.be ↗</h3>
+      <span class="p-text">My food and recipe app. A forgotten menu PDF turned full-stack app, with an AI sous-chef that fills in the recipes.</span>
+    </a>
+    <a class="project reveal" href="https://medium.com/@arnaudetienne/self-hosting-minecraft-on-a-raspberry-pi-5-ff4463cdeb47" target="_blank">
+      <span class="mono muted small">pi-minecraft/</span>
+      <h3 class="p-title">Minecraft on a Raspberry Pi 5</h3>
+      <span class="p-text">Self-hosted with backups and remote access, monitored by a small FastAPI dashboard.</span>
+    </a>
+  </div>
+</section>
 
-					<div class="col-md-6 col-lg-4 mb-4">
-						<a class="article-card d-block h-100" target="_blank"
-							href="https://medium.com/@arnaudetienne/self-hosting-minecraft-on-a-raspberry-pi-5-part-2-92fba5da794d?postPublishedType=initial">
-							<div class="article-card-body">
-								<div class="article-badge">27 November 2025</div>
-								<h3 class="h5 mb-2">
-									Self-Hosting Minecraft on a Raspberry Pi 5 (Part 2)
-								</h3>
-								<p class="article-excerpt mb-2">
-									A lightweight monitoring dashboard with FastAPI, system metrics and server controls.
-								</p>
-								<div class="article-meta">
-									Read more →
-								</div>
-							</div>
-						</a>
-					</div>
+<section id="now" class="two reveal">
+  <div class="stack">
+    <h2 class="prompt"><span aria-hidden="true"><span class="acc">$</span> cat now.txt</span><span class="sr-only">Now</span></h2>
+    <p class="now-line">Software Engineer at Commuty, since Nov 2023.</p>
+    <p class="muted small-text">Off the keyboard: hiking, squash, skiing in the 4 Vallées, beers with friends, sci-fi/fantasy, catching up on classic video games, and <a href="https://chez.arn0.be" target="_blank" class="ink underline">eating</a>.</p>
+  </div>
+  <div class="stack">
+    <h2 class="prompt"><span aria-hidden="true"><span class="acc">$</span> tail reading.log</span><span class="sr-only">Reading</span></h2>
+    <div class="log">
+      <span class="mono acc">reading</span><span class="w500">The Sword of Kaigen <span class="muted w400">— M.L. Wang</span></span>
+      <span class="mono muted">done</span><span>The Mercy of Gods</span>
+      <span class="mono muted">done</span><span>Le Meilleur des mondes</span>
+      <span class="mono muted">done</span><span>Bel-Ami</span>
+    </div>
+    <a href="https://www.goodreads.com/user/show/74340196-arnaud-etienne" target="_blank" class="small-link mono">goodreads ↗</a>
+  </div>
+</section>
 
-					<div class="col-md-6 col-lg-4 mb-4">
-						<a class="article-card d-block h-100"
-							href="https://medium.com/@arnaudetienne/self-hosting-minecraft-on-a-raspberry-pi-5-ff4463cdeb47"
-							target="_blank">
-							<div class="article-card-body">
-								<div class="article-badge">25 November 2025</div>
-								<h3 class="h5 mb-2">
-									Self-Hosting Minecraft on a Raspberry Pi 5
-								</h3>
-								<p class="article-excerpt mb-2">
-									From bare Pi to a self-hosted Minecraft server with backups and remote access.
-								</p>
-								<div class="article-meta">
-									Read more →
-								</div>
-							</div>
-						</a>
-					</div>
+<section id="cv">
+  <div class="section-head">
+    <h2 class="prompt"><span aria-hidden="true"><span class="acc">$</span> cat experience.log</span><span class="sr-only">Experience and education</span></h2>
+    <a href="/public/cv/arnaud_etienne_CV.pdf" target="_blank" class="btn mono">download cv.pdf ↓</a>
+  </div>
+  <div class="exp reveal"><span class="mono muted">2023-11 → now</span><div><h3 class="e-role">Software Engineer <span class="acc">@ <a href="https://commuty.com" target="_blank">Commuty</a></span></h3><span class="e-note">Core parking booking features, public APIs and statistics pipelines, across the whole stack:</span>
+    <ul class="e-list">
+      <li>Rails and Quarkus services in a 10+ microservices, event-driven architecture over RabbitMQ</li>
+      <li>Angular web app built on an internal component library, plus an Ionic mobile app</li>
+      <li>Connectors between our Parking Access API and external access-control systems (Syntegro, SALTO KS…)</li>
+      <li>Kubernetes deployments with Helm, AWS infrastructure with Terraform, CI/CD pipelines</li>
+    </ul></div></div>
+  <div class="exp reveal"><span class="mono muted">2022-07 → 2023-10</span><div><h3 class="e-role">Lead Developer <span class="acc">@ <a href="https://squarehub.eu" target="_blank">Squarehub</a></span></h3><span class="e-note">Led the development of Squarehub's recruitment platform: product decisions, architecture and day-to-day delivery.</span>
+    <ul class="e-list">
+      <li>Managed and coached a team of 3 software engineers</li>
+      <li>Defined product priorities and technical roadmap</li>
+      <li>Improved internal tools and automation</li>
+      <li>Oversaw data security and compliance</li>
+      <li>Handled internal IT hiring</li>
+      <li>Worked closely with founders on business needs</li>
+    </ul></div></div>
+  <div class="exp reveal"><span class="mono muted">2019-12 → 2022-06</span><div><h3 class="e-role">Full-stack Developer <span class="acc">@ <a href="https://overloop.com" target="_blank">Overloop</a></span></h3><span class="e-note">Ember.js + Rails CRM.</span></div></div>
+  <div class="exp reveal"><span class="mono muted">2019-02 → 2019-05</span><div><h3 class="e-role">Mobile Development Intern <span class="acc">@ RiseUp</span></h3><span class="e-note">Xamarin app built from scratch.</span></div></div>
+  <div class="exp reveal"><span class="mono muted">2015 → 2019</span><div><h3 class="e-role">BSc Computer Science and Management <span class="acc">@ <a href="https://www.vinci.be/en" target="_blank">Institut Paul Lambin</a></span></h3><span class="e-note">Cum Laude. Exchange at Cégep de Chicoutimi, Canada (2018).</span></div></div>
+  <div class="stackline mono"><span class="muted">stack=</span>Rails · Quarkus · JS · PostgreSQL · RabbitMQ · Docker · Kubernetes · Terraform · AWS</div>
+</section>
 
-					<div class="col-md-6 col-lg-4 mb-4">
-						<a class="article-card d-block h-100"
-							href="https://medium.com/@arnaudetienne/optimizing-database-queries-in-rails-with-active-record-b84295866af0"
-							target="_blank">
-							<div class="article-card-body">
-								<div class="article-badge">05 July 2023</div>
-								<h3 class="h5 mb-2">
-									Optimizing database queries in Rails with Active Record
-								</h3>
-								<p class="article-excerpt mb-2">
-									Practical techniques to track, understand and fix slow queries in real projects.
-								</p>
-								<div class="article-meta">
-									Read more →
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
+<section id="contact" class="reveal">
+  <h2 class="prompt"><span aria-hidden="true"><span class="acc">$</span> ls ~/links</span><span class="sr-only">Links</span></h2>
+  <div class="links">
+    <a class="chip mono" href="https://github.com/NelsonEU" target="_blank">github.com/NelsonEU ↗</a>
+    <a class="chip mono" href="https://www.linkedin.com/in/arnaud-etienne-1655ba68" target="_blank">linkedin.com/in/arnaud-etienne ↗</a>
+    <a class="chip mono" href="https://medium.com/@arnaudetienne" target="_blank">medium.com/@arnaudetienne ↗</a>
+  </div>
+</section>
 
-		<hr class="m-0">
+<footer class="foot mono"><span>© 2026 Arnaud Etienne</span><span>served from Belgium 🇧🇪</span></footer>
 
-		<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-			<div class="w-100">
-				<h2 class="mb-5">Skills</h2>
-
-				<div class="subheading mb-3">Programming Languages &amp; Tools</div>
-				<ul class="list-inline dev-icons">
-					<li class="list-inline-item">
-						<i class="devicon-rails-plain-wordmark colored"></i>
-					</li>
-					<li class="list-inline-item">
-						<i class="devicon-java-plain-wordmark colored"></i>
-					</li>
-					<li class="list-inline-item">
-						<i class="devicon-react-original-wordmark colored"></i>
-					</li>
-					<li class="list-inline-item">
-						<i class="devicon-angularjs-plain colored"></i>
-					</li>
-					<li class="list-inline-item">
-						<i class="devicon-ember-original-wordmark colored"></i>
-					</li>
-					<li class="list-inline-item">
-						<i class="devicon-postgresql-plain-wordmark colored"></i>
-					</li>
-					<li class="list-inline-item">
-						<i class="devicon-rabbitmq-plain-wordmark colored"></i>
-					</li>
-					<li class="list-inline-item">
-						<i class="devicon-docker-plain colored"></i>
-					</li>
-					<li class="list-inline-item">
-						<i class="devicon-kubernetes-plain-wordmark colored"></i>
-					</li>
-					<li class="list-inline-item">
-						<i class="devicon-amazonwebservices-plain-wordmark colored"></i>
-					</li>
-					<li class="list-inline-item">
-						<i class="devicon-heroku-plain-wordmark colored"></i>
-					</li>
-				</ul>
-
-				<div class="subheading mb-3">About my work</div>
-				<p>
-					I'm a full-stack engineer with a backend-heavy focus, comfortable writing solid SQL queries and designing
-					event-driven systems, particularly with RabbitMQ. I care deeply about test coverage as a tool for confidence
-					rather than a box to tick.
-				</p>
-				<p>
-					I'm also at ease across the infrastructure stack, from Docker and Kubernetes to Terraform and CI/CD pipelines.
-					Started from Heroku, now we here.
-				</p>
-				<p>
-					More recently, I've also been using AI coding assistants daily and keeping an eye on how the tooling is
-					evolving. Not as a shortcut, but as leverage on top of solid fundamentals.
-				</p>
-				<p class="mb-0">
-					Beyond the code, I value clean and readable solutions, enjoy mentoring and thorough code reviews, and work best
-					on teams that prize honest technical feedback and shared ownership.
-				</p>
-			</div>
-		</section>
-
-		<hr class="m-0">
-
-		<section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-
-			<div class="w-100">
-				<h2 class="mb-5">Experience</h2>
-
-				<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-					<div class="resume-content">
-						<h3 class="mb-0">Software Engineer</h3>
-						<div class="subheading mb-3">Commuty</div>
-						<p>Working across a 10+ micro-services ecosystem (Rails, Quarkus, Angular). I build and maintain core
-							parking booking features, public APIs, statistics pipelines, and infra tooling (Docker, K8s, Helm…).</p>
-					</div>
-					<div class="resume-date text-md-right">
-						<span class="text-primary">November 2023 - now</span>
-					</div>
-				</div>
-
-				<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-					<div class="resume-content">
-						<h3 class="mb-0">Lead Developer</h3>
-						<div class="subheading mb-3">Squarehub</div>
-						<p>Led the development of Squarehub’s recruitment platform. I handled product decisions, architecture and
-							day-to-day delivery while managing a team of three engineers.</p>
-						<ul>
-							<li>Managed and coached a team of 3 software engineers</li>
-							<li>Defined product priorities and technical roadmap</li>
-							<li>Improved internal tools and automation</li>
-							<li>Oversaw data security and compliance</li>
-							<li>Handled internal IT hiring</li>
-							<li>Worked closely with founders on business needs</li>
-						</ul>
-					</div>
-					<div class="resume-date text-md-right">
-						<span class="text-primary">July 2022 - October 2023</span>
-					</div>
-				</div>
-
-				<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-					<div class="resume-content">
-						<h3 class="mb-0">Full-stack Developer</h3>
-						<div class="subheading mb-3">Overloop</div>
-						<p>Full-stack development on the Overloop CRM (Ember.js + Rails). Delivered new features, refactored legacy
-							parts, improved performance and collaborated closely with product and sales teams.</p>
-					</div>
-					<div class="resume-date text-md-right">
-						<span class="text-primary">December 2019 - June 2022</span>
-					</div>
-				</div>
-
-				<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-					<div class="resume-content">
-						<h3 class="mb-0">Mobile Development Intern</h3>
-						<div class="subheading mb-3">RiseUp</div>
-						<p>Designed and built a cross-platform mobile app from scratch (Xamarin). Managed the full project myself:
-							specs, development, testing, and delivery.</p>
-					</div>
-					<div class="resume-date text-md-right">
-						<span class="text-primary">February 2019 - May 2019</span>
-					</div>
-				</div>
-
-
-		</section>
-
-		<hr class="m-0">
-
-		<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-			<div class="w-100">
-				<h2 class="mb-5">Education</h2>
-
-				<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-					<div class="resume-content">
-						<h3 class="mb-0">Institut Paul Lambin</h3>
-						<div class="subheading mb-3">Bachelor of Computer Science and Management</div>
-						<p>Cum Laude</p>
-					</div>
-					<div class="resume-date text-md-right">
-						<span class="text-primary">September 2015 - June 2019</span>
-					</div>
-				</div>
-
-				<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-					<div class="resume-content">
-						<h3 class="mb-0">Cégep de Chicoutimi</h3>
-						<div class="subheading mb-3">Mobility exchange in Computer Science</div>
-						<p>GPA: 3.3</p>
-					</div>
-					<div class="resume-date text-md-right">
-						<span class="text-primary">August 2018 - December 2018</span>
-					</div>
-				</div>
-
-				<div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-					<div class="resume-content">
-						<h3 class="mb-0">University of Nicosia</h3>
-						<div class="subheading mb-3">Introduction to digital currencies (MOOC)</div>
-						<p>GPA: 3.4</p>
-					</div>
-					<div class="resume-date text-md-right">
-						<span class="text-primary">September 2017 - December 2017</span>
-					</div>
-				</div>
-
-			</div>
-		</section>
-
-		<hr class="m-0">
-
-		<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
-			<div class="w-100">
-				<div class="row align-items-center">
-					<div class="col-lg-6 mb-5">
-						<h2 class="mb-5">Interests</h2>
-						<p class="mb-3">
-							Outside of the terminal, you'll find me hiking a trail somewhere, on a squash court or on a ski slope in
-							the
-							4
-							Vallées when possible. But let's be honest, most of the time I'll just be chilling with friends and beers.
-						</p>
-						<p class="mb-0">
-							I'm also a heavy reader, mostly sci-fi and fantasy, but not only. And still a gamer when I can, currently
-							catching
-							up on all the classics I missed while playing too much Call of Duty in my younger years.
-						</p>
-						<p class="mb-0">
-							And, last but not least, I like to <a href="https://chez.arn0.be" target="_blank">eat</a>.
-						</p>
-					</div>
-
-					<div class="col-lg-6">
-						<!-- Read list -->
-						<div class="mb-5">
-							<!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
-							<style type="text/css" media="screen">
-								.gr_custom_container_1777035476 {
-									/* customize your Goodreads widget container here*/
-									border: 1px solid gray;
-									border-radius: 10px;
-									padding: 10px 5px 10px 5px;
-									background-color: #FFFFFF;
-									color: #000000;
-
-								}
-
-								.gr_custom_header_1777035476 {
-									/* customize your Goodreads header here*/
-									border-bottom: 1px solid gray;
-									width: 100%;
-									margin-bottom: 5px;
-									text-align: center;
-									font-size: 80%
-								}
-
-								.gr_custom_each_container_1777035476 {
-									/* customize each individual book container here */
-									width: 100%;
-									clear: both;
-									margin-bottom: 10px;
-									overflow: auto;
-									padding-bottom: 4px;
-									border-bottom: 1px solid #aaa;
-								}
-
-								.gr_custom_book_container_1777035476 {
-									/* customize your book covers here */
-									overflow: hidden;
-									height: 60px;
-									float: left;
-									margin-right: 4px;
-									width: 39px;
-								}
-
-								.gr_custom_author_1777035476 {
-									/* customize your author names here */
-									font-size: 10px;
-								}
-
-								.gr_custom_tags_1777035476 {
-									/* customize your tags here */
-									font-size: 10px;
-									color: gray;
-								}
-
-								.gr_custom_rating_1777035476 {
-									/* customize your rating stars here */
-									float: right;
-								}
-							</style>
-
-							<div id="gr_custom_widget_1777035476">
-								<div class="gr_custom_container_1777035476">
-									<h2 class="gr_custom_header_1777035476">
-										<a style="text-decoration: none;" rel="nofollow"
-											href="https://www.goodreads.com/review/list/74340196-arnaud-etienne?shelf=read&amp;utm_medium=api&amp;utm_source=custom_widget">Arnaud&#39;s
-											bookshelf: read</a>
-									</h2>
-									<div class="gr_custom_each_container_1777035476">
-										<div class="gr_custom_book_container_1777035476">
-											<a title="Bel-Ami" rel="nofollow"
-												href="https://www.goodreads.com/review/show/8448845203?utm_medium=api&amp;utm_source=custom_widget"><img
-													alt="Bel-Ami" border="0"
-													src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657539241l/780581._SY75_.jpg" /></a>
-										</div>
-										<div class="gr_custom_title_1777035476">
-											<a rel="nofollow"
-												href="https://www.goodreads.com/review/show/8448845203?utm_medium=api&amp;utm_source=custom_widget">Bel-Ami</a>
-										</div>
-										<div class="gr_custom_author_1777035476">
-											by <a rel="nofollow" href="https://www.goodreads.com/author/show/18791.Guy_de_Maupassant">Guy de
-												Maupassant</a>
-										</div>
-									</div>
-									<div class="gr_custom_each_container_1777035476">
-										<div class="gr_custom_book_container_1777035476">
-											<a title="Le Meilleur des mondes" rel="nofollow"
-												href="https://www.goodreads.com/review/show/8448837423?utm_medium=api&amp;utm_source=custom_widget"><img
-													alt="Le Meilleur des mondes" border="0"
-													src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1489199363l/632416._SY75_.jpg" /></a>
-										</div>
-										<div class="gr_custom_title_1777035476">
-											<a rel="nofollow"
-												href="https://www.goodreads.com/review/show/8448837423?utm_medium=api&amp;utm_source=custom_widget">Le
-												Meilleur des mondes</a>
-										</div>
-										<div class="gr_custom_author_1777035476">
-											by <a rel="nofollow" href="https://www.goodreads.com/author/show/3487.Aldous_Huxley">Aldous
-												Huxley</a>
-										</div>
-									</div>
-									<div class="gr_custom_each_container_1777035476">
-										<div class="gr_custom_book_container_1777035476">
-											<a title="The Mercy of Gods (The Captive's War, #1)" rel="nofollow"
-												href="https://www.goodreads.com/review/show/6986468377?utm_medium=api&amp;utm_source=custom_widget"><img
-													alt="The Mercy of Gods" border="0"
-													src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1725128722l/201930181._SY75_.jpg" /></a>
-										</div>
-										<div class="gr_custom_title_1777035476">
-											<a rel="nofollow"
-												href="https://www.goodreads.com/review/show/6986468377?utm_medium=api&amp;utm_source=custom_widget">The
-												Mercy of Gods</a>
-										</div>
-										<div class="gr_custom_author_1777035476">
-											by <a rel="nofollow" href="https://www.goodreads.com/author/show/4192148.James_S_A_Corey">James
-												S.A. Corey</a>
-										</div>
-									</div>
-									<div class="gr_custom_each_container_1777035476">
-										<div class="gr_custom_book_container_1777035476">
-											<a title="Clean Code: A Handbook of Agile Software Craftsmanship" rel="nofollow"
-												href="https://www.goodreads.com/review/show/5952021523?utm_medium=api&amp;utm_source=custom_widget"><img
-													alt="Clean Code: A Handbook of Agile Software Craftsmanship" border="0"
-													src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607l/3735293._SX50_.jpg" /></a>
-										</div>
-										<div class="gr_custom_title_1777035476">
-											<a rel="nofollow"
-												href="https://www.goodreads.com/review/show/5952021523?utm_medium=api&amp;utm_source=custom_widget">Clean
-												Code: A Handbook of Agile Software Craftsmanship</a>
-										</div>
-										<div class="gr_custom_author_1777035476">
-											by <a rel="nofollow" href="https://www.goodreads.com/author/show/45372.Robert_C_Martin">Robert C.
-												Martin</a>
-										</div>
-									</div>
-									<br style="clear: both" />
-									<center>
-										<a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0"
-												src="https://s.gr-assets.com/images/widget/widget_logo.gif" /></a>
-									</center>
-									<noscript>
-										Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Arnaud,
-										and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
-									</noscript>
-								</div>
-
-							</div>
-							<script
-								src="https://www.goodreads.com/review/custom_widget/74340196.Arnaud's%20bookshelf:%20read?cover_position=left&cover_size=small&num_books=4&order=d&shelf=read&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_read&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1777035476&widget_text_color=000000&widget_title_size=small&widget_width=full"
-								type="text/javascript" charset="utf-8"></script>
-						</div>
-
-						<!-- Currently reading -->
-						<div>
-							<!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
-							<style type="text/css" media="screen">
-								.gr_custom_container_1777035298 {
-									/* customize your Goodreads widget container here*/
-									border: 1px solid gray;
-									border-radius: 10px;
-									padding: 10px 5px 10px 5px;
-									background-color: #FFFFFF;
-									color: #000000;
-
-								}
-
-								.gr_custom_header_1777035298 {
-									/* customize your Goodreads header here*/
-									border-bottom: 1px solid gray;
-									width: 100%;
-									margin-bottom: 5px;
-									text-align: center;
-									font-size: 80%
-								}
-
-								.gr_custom_each_container_1777035298 {
-									/* customize each individual book container here */
-									width: 100%;
-									clear: both;
-									margin-bottom: 10px;
-									overflow: auto;
-									padding-bottom: 4px;
-									border-bottom: 1px solid #aaa;
-								}
-
-								.gr_custom_book_container_1777035298 {
-									/* customize your book covers here */
-									overflow: hidden;
-									height: 60px;
-									float: left;
-									margin-right: 4px;
-									width: 39px;
-								}
-
-								.gr_custom_author_1777035298 {
-									/* customize your author names here */
-									font-size: 10px;
-								}
-
-								.gr_custom_tags_1777035298 {
-									/* customize your tags here */
-									font-size: 10px;
-									color: gray;
-								}
-
-								.gr_custom_rating_1777035298 {
-									/* customize your rating stars here */
-									float: right;
-								}
-							</style>
-
-							<div id="gr_custom_widget_1777035298">
-								<div class="gr_custom_container_1777035298">
-									<h2 class="gr_custom_header_1777035298">
-										<a style="text-decoration: none;" rel="nofollow"
-											href="https://www.goodreads.com/review/list/74340196-arnaud-etienne?shelf=currently-reading&amp;utm_medium=api&amp;utm_source=custom_widget">Currently
-											Reading</a>
-									</h2>
-									<div class="gr_custom_each_container_1777035298">
-										<div class="gr_custom_book_container_1777035298">
-											<a title="The Sword of Kaigen" rel="nofollow"
-												href="https://www.goodreads.com/review/show/8434672871?utm_medium=api&amp;utm_source=custom_widget"><img
-													alt="The Sword of Kaigen" border="0"
-													src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1702907961l/41886271._SX50_.jpg" /></a>
-										</div>
-										<div class="gr_custom_title_1777035298">
-											<a rel="nofollow"
-												href="https://www.goodreads.com/review/show/8434672871?utm_medium=api&amp;utm_source=custom_widget">The
-												Sword of Kaigen</a>
-										</div>
-										<div class="gr_custom_author_1777035298">
-											by <a rel="nofollow" href="https://www.goodreads.com/author/show/15735471.M_L_Wang">M.L. Wang</a>
-										</div>
-									</div>
-									<br style="clear: both" />
-									<center>
-										<a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0"
-												src="https://s.gr-assets.com/images/widget/widget_logo.gif" /></a>
-									</center>
-									<noscript>
-										Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Arnaud,
-										and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
-									</noscript>
-								</div>
-
-							</div>
-							<script
-								src="https://www.goodreads.com/review/custom_widget/74340196.Currently%20Reading?cover_position=left&cover_size=small&num_books=1&order=d&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1777035298&widget_text_color=000000&widget_title_size=small&widget_width=full"
-								type="text/javascript" charset="utf-8"></script>
-						</div>
-					</div>
-
-
-				</div>
-			</div>
-		</section>
-
-	</div>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-	<script src="js/resume.min.js"></script>
+</div>
+<script src="main.js"></script>
 </body>
-
 </html>

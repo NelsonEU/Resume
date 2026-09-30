@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arn0.be/sitemap.xml
