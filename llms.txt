@@ -27,6 +27,7 @@ Stack: Ruby on Rails, Quarkus (Java), JavaScript (Angular, Ionic, Ember.js), Pos
 
 ## Projects
 
+- [tools.arn0.be](https://tools.arn0.be) (work in progress): small dev utilities (JSON, JWT, Base64, hashes, IDs, timestamps, cron, regex) that run entirely in the browser.
 - [chez.arn0.be](https://chez.arn0.be): food and recipe app with an AI sous-chef that fills in the recipes.
 
 ## Links
