@@ -1,0 +1,11 @@
+name = "arn0-pi-status"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+
+# Only reachable through the arn0.be route, not on a *.workers.dev URL.
+workers_dev = false
+routes = [{ pattern = "arn0.be/api/pi*", zone_name = "arn0.be" }]
+
+# Secrets, set once with `npx wrangler secret put <NAME>` (not overwritten by deploys):
+#   PI_API_URL, PI_USERNAME, PI_PASSWORD
+# For `wrangler dev`, put them in worker/.dev.vars (gitignored), see .dev.vars.example.

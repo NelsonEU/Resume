@@ -69,7 +69,15 @@ export const articles: Article[] = [
   },
 ];
 
-export type Project = { dir: string; title: string; text: string; href: string; wip?: boolean };
+export type Project = {
+  dir: string;
+  title: string;
+  text: string;
+  href: string;
+  wip?: boolean;
+  // Shows the live Minecraft server status, served by the Worker at /api/pi (see worker/).
+  liveStatus?: boolean;
+};
 
 export const projects: Project[] = [
   {
@@ -89,6 +97,7 @@ export const projects: Project[] = [
     title: 'Minecraft on a Raspberry Pi 5',
     text: 'Self-hosted with backups and remote access, monitored by a small FastAPI dashboard.',
     href: 'https://medium.com/@arnaudetienne/self-hosting-minecraft-on-a-raspberry-pi-5-ff4463cdeb47',
+    liveStatus: true,
   },
 ];
 

@@ -10,5 +10,17 @@ const { project } = Astro.props;
 <a class="project reveal" href={project.href} target="_blank">
   <span class="mono muted small">{project.dir}</span>
   <h3 class="p-title">{project.title} {project.wip && <span class="badge mono">wip</span>}</h3>
+  {
+    project.liveStatus && (
+      <div class="well mono" data-pi hidden>
+        <div>
+          <span data-pi-dot>●</span> minecraft.service <span data-pi-state />
+        </div>
+        <div class="muted">
+          players <span class="ink" data-pi-players /> · mood <span class="ink" data-pi-mood />
+        </div>
+      </div>
+    )
+  }
   <span class="p-text">{project.text}</span>
 </a>
