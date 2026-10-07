@@ -81,6 +81,12 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    dir: 'kort/',
+    title: 'kort.arn0.be ↗',
+    text: 'A simple link shortener. Paste a long URL, get a short one that works for a year. No account, no tracking.',
+    href: 'https://kort.arn0.be',
+  },
+  {
     dir: 'chez/',
     title: 'chez.arn0.be ↗',
     text: 'My food and recipe app. A forgotten menu PDF turned full-stack app, with an AI sous-chef that fills in the recipes.',
