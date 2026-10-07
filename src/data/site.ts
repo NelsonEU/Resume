@@ -102,7 +102,7 @@ export const projects: Project[] = [
     dir: 'pi-minecraft/',
     title: 'Minecraft on a Raspberry Pi 5',
     text: 'Self-hosted with backups and remote access, monitored by a small FastAPI dashboard.',
-    href: 'https://medium.com/@arnaudetienne/self-hosting-minecraft-on-a-raspberry-pi-5-ff4463cdeb47',
+    href: 'https://kort.arn0.be/8s6UWQ',
     liveStatus: true,
   },
 ];
