@@ -81,7 +81,7 @@ section { display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 2
 .badge { font-size: 11px; font-weight: 500; color: var(--acc); border: 1px solid var(--acc); border-radius: 4px; padding: 1px 6px; vertical-align: 3px; }
 
 .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 32px; }
-.grid-projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.grid-projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .project { display: flex; flex-direction: column; gap: 14px; border: 1px solid var(--line); border-radius: 10px; padding: 22px; transition: transform .2s ease, border-color .2s ease; }
 .project:hover { transform: translateY(-3px); border-color: var(--acc); color: inherit; }
 .p-title { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
@@ -123,7 +123,7 @@ a.acc:hover, .e-role a:hover { text-decoration: underline; text-underline-offset
 .foot { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
 @media (max-width: 719px) {
-  .article, .exp, .two, .e-list { grid-template-columns: minmax(0, 1fr); }
+  .article, .exp, .two, .e-list, .grid-projects { grid-template-columns: minmax(0, 1fr); }
 }
 
 .js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .5s cubic-bezier(.2,.7,.2,1), transform .5s cubic-bezier(.2,.7,.2,1); }
