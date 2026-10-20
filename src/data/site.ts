@@ -38,6 +38,12 @@ export type Article = { title: string; date: string; dek: string; href: string }
 // Newest first. The first one gets the `new` badge.
 export const articles: Article[] = [
   {
+    title: 'I Replaced My Samsung TV’s Home Screen with Claude',
+    date: '2026-10-20',
+    dek: 'How I used Claude to build a custom home screen for my Samsung TV.',
+    href: 'https://medium.com/@arnaudetienne/i-replaced-my-samsung-tvs-home-screen-with-claude-6f72e98c55fc',
+  },
+  {
     title: 'From a forgotten PDF to a full-stack app with an AI sous-chef',
     date: '2026-09-18',
     dek: 'How a simple food menu PDF grew into a full-stack app with an AI that fills in the recipes for you.',
