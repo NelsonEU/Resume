@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { profile, links, goodreads, experience, education } from '../data/site';
+import { profile, links, hardcover, experience, education } from '../data/site';
 
 const image = new URL(profile.image, Astro.site).href;
 const current = experience[0];
@@ -13,7 +13,7 @@ const jsonLd = {
   url: profile.url,
   image,
   address: { '@type': 'PostalAddress', addressCountry: 'BE' },
-  sameAs: [...links.map((l) => l.href), goodreads.profile],
+  sameAs: [...links.map((l) => l.href), hardcover.profile],
   jobTitle: profile.jobTitle,
   knowsAbout: profile.knowsAbout,
   worksFor: { '@type': 'Organization', name: current.org, url: current.href },

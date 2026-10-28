@@ -21,10 +21,10 @@ export const profile = {
   ],
 };
 
-export const goodreads = {
-  userId: '74340196',
-  profile: 'https://www.goodreads.com/user/show/74340196-arnaud-etienne',
-  recentlyRead: 3,
+// Just the profile link under the reading list and in the JSON-LD; the books
+// themselves come from Hardcover through the Worker at /api/books (see worker/).
+export const hardcover = {
+  profile: 'https://hardcover.app/@TheSonNel',
 };
 
 export const links = [
