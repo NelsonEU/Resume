@@ -1,5 +1,5 @@
 {
-  "name": "arn0-pi-status",
+  "name": "arn0-api",
   "private": true,
   "type": "module",
   "scripts": {

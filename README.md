@@ -17,14 +17,14 @@ npm run check    # type-checks the project
 
 ```
 src/data/site.ts        All the content: profile, articles, projects, experience, links
-src/lib/goodreads.ts    Fetches the reading list from Goodreads RSS at build time
 src/pages/index.astro   The page
 src/pages/llms.txt.ts   Generates /llms.txt from the same data
 src/pages/sitemap.xml.ts Generates /sitemap.xml (lastmod = build date)
 src/layouts/Base.astro  <head>: meta tags, JSON-LD, fonts, theme script
 src/components/         Header, section titles, article rows, project cards, experience items
 src/styles/global.css   Design tokens (dark and light themes) and layout
-src/scripts/main.ts     Theme toggle and fade-in on scroll
+src/scripts/main.ts     Theme toggle, fade-in on scroll, Pi status and reading list
+worker/                 Cloudflare Worker behind arn0.be/api/*: Pi status and Hardcover reading list
 public/                 Copied as-is to the site root: CNAME, robots.txt, img/, cv/
 ```
 
@@ -56,7 +56,7 @@ The Pi's URL and credentials are Worker secrets, set once from `worker/` and kep
 | Change | Where |
 |---|---|
 | Article, project, job, links or stack | `src/data/site.ts`. The page, `llms.txt` and the JSON-LD all update from it. The first article gets the `new` badge; set `wip: true` on a project for the `wip` badge |
-| Reading list | Nothing: it comes from Goodreads on each build. If Goodreads is unreachable, the build logs a warning and the list is left out |
+| Reading list | Nothing: the Worker reads it from Hardcover at `/api/books`, cached 6h at the edge. No rebuild needed. If Hardcover is unreachable, the section stays hidden |
 | New CV | Replace `public/cv/arnaud_etienne_CV.pdf`, keeping the exact file name (paths are case-sensitive) |
 
 CSS and JS file names include a content hash, so browsers pick up changes on the next deploy without any manual cache-busting.

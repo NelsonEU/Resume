@@ -5,11 +5,7 @@ import SectionTitle from '../components/SectionTitle.astro';
 import ArticleRow from '../components/ArticleRow.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ExperienceItem from '../components/ExperienceItem.astro';
-import { profile, articles, projects, experience, education, links, goodreads } from '../data/site';
-import { getReading } from '../lib/goodreads';
-
-const { current, recent } = await getReading();
-const hasBooks = current.length + recent.length > 0;
+import { profile, articles, projects, experience, education, links, hardcover } from '../data/site';
 ---
 
 <Base>
@@ -49,27 +45,10 @@ const hasBooks = current.length + recent.length > 0;
     </div>
     <div class="stack">
       <SectionTitle cmd="tail reading.log" label="Reading" />
-      {
-        hasBooks && (
-          <div class="log">
-            {current.map((b) => (
-              <>
-                <span class="mono acc">reading</span>
-                <a href={b.href} target="_blank" class="w500">
-                  {b.title} <span class="muted w400">— {b.author}</span>
-                </a>
-              </>
-            ))}
-            {recent.map((b) => (
-              <>
-                <span class="mono muted">done</span>
-                <a href={b.href} target="_blank">{b.title}</a>
-              </>
-            ))}
-          </div>
-        )
-      }
-      <a href={goodreads.profile} target="_blank" class="small-link mono">goodreads ↗</a>
+      {/* Filled in by main.ts from the Worker at /api/books (see worker/). */}
+      <div class="log" data-books hidden />
+
+      <a href={hardcover.profile} target="_blank" class="small-link mono">hardcover ↗</a>
     </div>
   </section>
 

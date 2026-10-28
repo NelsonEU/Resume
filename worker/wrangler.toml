@@ -1,11 +1,13 @@
-name = "arn0-pi-status"
+name = "arn0-api"
 main = "src/index.ts"
 compatibility_date = "2026-09-01"
 
-# Only reachable through the arn0.be route, not on a *.workers.dev URL.
+# Only reachable through the arn0.be routes, not on a *.workers.dev URL.
 workers_dev = false
-routes = [{ pattern = "arn0.be/api/pi*", zone_name = "arn0.be" }]
+routes = [{ pattern = "arn0.be/api/*", zone_name = "arn0.be" }]
 
-# Secrets, set once with `npx wrangler secret put <NAME>` (not overwritten by deploys):
-#   PI_API_URL, PI_USERNAME, PI_PASSWORD
+# Secrets, set once with `npx wrangler secret put <NAME>` (not overwritten by deploys).
+# They belong to the Worker by name, so a rename means setting every one again:
+#   PI_API_URL, PI_USERNAME, PI_PASSWORD   -> /api/pi
+#   HARDCOVER_TOKEN                        -> /api/books
 # For `wrangler dev`, put them in worker/.dev.vars (gitignored), see .dev.vars.example.
