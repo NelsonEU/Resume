@@ -83,6 +83,15 @@ section { display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 2
 .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 32px; }
 .grid-projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .project { display: flex; flex-direction: column; gap: 14px; border: 1px solid var(--line); border-radius: 10px; padding: 22px; transition: transform .2s ease, border-color .2s ease; }
+.p-body { display: flex; flex-direction: column; gap: 14px; flex: 1; min-width: 0; }
+
+/* Share the dir / title / body tracks across each row of cards, so the descriptions
+   sit on one baseline even when a title wraps to two lines. Three rows, all always
+   present: an empty track would still add a row gap inside the card. */
+@supports (grid-template-rows: subgrid) {
+  .grid-projects { grid-auto-rows: auto auto 1fr; }
+  .project { display: grid; grid-row: span 3; grid-template-rows: subgrid; }
+}
 .project:hover { transform: translateY(-3px); border-color: var(--acc); color: inherit; }
 .p-title { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
 .p-text { color: var(--muted); font-size: 15px; text-wrap: pretty; }

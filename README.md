@@ -25,7 +25,7 @@ src/components/         Header, section titles, article rows, project cards, exp
 src/styles/global.css   Design tokens (dark and light themes) and layout
 src/scripts/main.ts     Theme toggle, fade-in on scroll, Pi status and reading list
 worker/                 Cloudflare Worker behind arn0.be/api/*: Pi status and Hardcover reading list
-public/                 Copied as-is to the site root: CNAME, robots.txt, img/, cv/
+public/                 Copied as-is to the site root: CNAME, robots.txt, img/, cv/, habits/
 ```
 
 ## Deployment
@@ -33,7 +33,6 @@ public/                 Copied as-is to the site root: CNAME, robots.txt, img/, 
 A GitHub Action (`.github/workflows/deploy.yml`) builds the site and deploys it to GitHub Pages:
 
 - on every push to `master`
-- every day at 05:00 UTC, to refresh the reading list
 - manually, from the Actions tab
 
 The repository's Pages source must be set to **GitHub Actions** (Settings → Pages). The custom domain comes from `public/CNAME`, and DNS is on Cloudflare.
@@ -51,6 +50,10 @@ It's deployed separately from the site, by `.github/workflows/deploy-worker.yml`
 
 The Pi's URL and credentials are Worker secrets, set once from `worker/` and kept across deploys.
 
+## Habits support pages (`public/habits/`)
+
+Two hand-written, bilingual (EN/FR) pages served at `arn0.be/habits/` and `arn0.be/habits/privacy/`. They are the Support URL and Privacy Policy URL declared in App Store Connect for the Habits iOS app, so **those paths must not change**. Plain HTML with their own inline styles: they sit in `public/`, outside the Astro build and the site's design tokens.
+
 ## Updating content
 
 | Change | Where |
@@ -58,6 +61,7 @@ The Pi's URL and credentials are Worker secrets, set once from `worker/` and kep
 | Article, project, job, links or stack | `src/data/site.ts`. The page, `llms.txt` and the JSON-LD all update from it. The first article gets the `new` badge; set `wip: true` on a project for the `wip` badge |
 | Reading list | Nothing: the Worker reads it from Hardcover at `/api/books`, cached 6h at the edge. No rebuild needed. If Hardcover is unreachable, the section stays hidden |
 | New CV | Replace `public/cv/arnaud_etienne_CV.pdf`, keeping the exact file name (paths are case-sensitive) |
+| Habits support or privacy text | `public/habits/index.html` and `public/habits/privacy/index.html`, in both languages |
 
 CSS and JS file names include a content hash, so browsers pick up changes on the next deploy without any manual cache-busting.
 

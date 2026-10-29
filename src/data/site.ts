@@ -87,6 +87,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    dir: 'habits/',
+    title: 'Habits ↗',
+    text: 'An iOS habit tracker built around one gesture: every evening, tick the habits you kept. No account, no server, everything stays on the phone.',
+    href: 'https://habits.arn0.be/',
+    wip: true,
+  },
+  {
+    dir: 'arn0-tv/',
+    title: 'Samsung TV home screen',
+    text: "A quieter home screen for my Tizen TV: a clock, my apps, my consoles, nothing else. Driven by the normal remote, because the TV's own home screen had become a shop.",
+    href: 'https://kort.arn0.be/RvM5F3',
+  },
+  {
     dir: 'kort/',
     title: 'kort.arn0.be ↗',
     text: 'A simple link shortener. Paste a long URL, get a short one that works for a year. No account, no tracking.',
@@ -130,10 +143,13 @@ export const experience: Experience[] = [
     href: 'https://commuty.com',
     note: 'Core parking booking features, public APIs and statistics pipelines, across the whole stack:',
     bullets: [
+      'Delivered core features end to end: parking booking flows, notifications, public APIs and internal tooling',
+      'Cut a statistics report refresh from 9 minutes to 15 seconds',
+      'Connectors between our Parking Access API and external access-control systems (Syntegro, SALTO KS…)',
       'Rails and Quarkus services in a 10+ microservices, event-driven architecture over RabbitMQ',
       'Angular web app built on an internal component library, plus an Ionic mobile app',
-      'Connectors between our Parking Access API and external access-control systems (Syntegro, SALTO KS…)',
-      'Kubernetes deployments with Helm, AWS infrastructure with Terraform, CI/CD pipelines',
+      'First Kubernetes deployments of new services, with Helm, Terraform and AWS behind them',
+      'Code reviews and technical support across the team',
     ],
   },
   {
@@ -156,13 +172,15 @@ export const experience: Experience[] = [
     role: 'Full-stack Developer',
     org: 'Overloop',
     href: 'https://overloop.com',
-    note: 'Ember.js + Rails CRM.',
-  },
-  {
-    when: '2019-02 → 2019-05',
-    role: 'Mobile Development Intern',
-    org: 'RiseUp',
-    note: 'Xamarin app built from scratch.',
+    note: 'Full-stack work on a SaaS sales engagement platform (ex Prospect.io), shipping features and untangling legacy code:',
+    bullets: [
+      'Ember.js front end on a Ruby on Rails API, across the whole feature stack',
+      'Integrations with Pipedrive, HubSpot, Salesforce and LinkedIn',
+      'Built the mobile light version of the app',
+      'Shipped the embedded chat feature',
+      'Performance and scalability work, much of it in SQL and Active Record',
+      'Worked closely with the product and sales teams on what to build next',
+    ],
   },
 ];
 
