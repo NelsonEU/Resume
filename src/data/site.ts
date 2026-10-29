@@ -89,7 +89,7 @@ export const projects: Project[] = [
   {
     dir: 'habits/',
     title: 'Habits ↗',
-    text: 'An iOS habit tracker built around one gesture: every evening, tick the habits you kept. No account, no server, everything stays on the phone.',
+    text: 'An iOS and Android habit tracker built around one gesture: every evening, tick the habits you kept. No account, no server, everything stays on the phone.',
     href: 'https://habits.arn0.be/',
     wip: true,
   },
